@@ -65,3 +65,6 @@ var data = [
   }
 ];
 
+$(document).ready(function() {
+  $('.dropdown-toggle').dropdown();
+});
