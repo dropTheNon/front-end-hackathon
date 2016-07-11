@@ -9,33 +9,238 @@
 
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
   <div class="container">
     <div class="titleBar">
-      <h1>CannaVis <small> - Data Visualization for the Cannabis Industry</small></h3>
+      <h1>CannaVis <small> - Data Visualization for the Cannabis Industry</small></h1>
     </div>
     <hr/>
     <div class="userBox row">
-      <h4 class="col-md-5">You are logged in as:<strong>"Dockside Cannabis"</strong></h4>
+      <h4 class="col-md-5">You are logged in as: <strong>"Dockside Cannabis"</strong></h4>
       <div class="btn-group col-md-3 col-md-offset-4">
         <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Choose Store <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-          <li><a href="#">Dockside Cannabis - Shoreline</a></li>
-          <li><a href="#">Dockside Cannabis - SoDo</a></li>
+          <li><a href="/show">Dockside Cannabis - Shoreline</a></li>
+          <li><a href="/show1">Dockside Cannabis - SoDo</a></li>
         </ul>
       </div>
     </div>
     <hr/>
+    <h2>Sales by Month</h2>
+    <h6>most recent month last</h6>
+    <div class="dataVisControl row">
+      <div class="col-md-5">
+        <h3>Dockside Cannabis - Shoreline</h3>
+        <div class="dataVisShoreline dataVis"></div>
+      </div>
+      <div class="col-md-5 col-md-offset-2">
+        <h3>DocksideCannabis - SoDo</h3>
+        <div class="dataVisSodo dataVis"></div>
+      </div>
+    </div>
+    <hr/>
+    <div class="rawDataBox row">
+      <div class="col-md-5">
+        <h3>Dockside Cannabis - Shoreline</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Sales</th>
+              <th>Excise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>All-2014</td>
+              <td>$60,645</td>
+              <td>$20,215</td>
+            </tr>
+            <tr>
+              <td>Jan-2015</td>
+              <td>$136,333</td>
+              <td>$45,444</td>
+            </tr>
+            <tr>
+              <td>Feb-2015</td>
+              <td>$176,798</td>
+              <td>$58,933</td>
+            </tr>
+            <tr>
+              <td>Mar-2015</td>
+              <td>$236,259</td>
+              <td>$78,753</td>
+            </tr>
+            <tr>
+              <td>Apr-2015</td>
+              <td>$256,278</td>
+              <td>$85,426</td>
+            </tr>
+            <tr>
+              <td>May-2015</td>
+              <td>$284,049</td>
+              <td>$94,683</td>
+            </tr>
+            <tr>
+              <td>Jun-2015</td>
+              <td>$276,344</td>
+              <td>$92,115</td>
+            </tr>
+            <tr>
+              <td>Jul-2015</td>
+              <td>$292,945</td>
+              <td>$108,390</td>
+            </tr>
+            <tr>
+              <td>Aug-2015</td>
+              <td>$311,953</td>
+              <td>$115,423</td>
+            </tr>
+            <tr>
+              <td>Sep-2015</td>
+              <td>$320,809</td>
+              <td>$118,699</td>
+            </tr>
+            <tr>
+              <td>Oct-2015</td>
+              <td>$341,231</td>
+              <td>$126,256</td>
+            </tr>
+            <tr>
+              <td>Nov-2015</td>
+              <td>$313,294</td>
+              <td>$115,919</td>
+            </tr>
+            <tr>
+              <td>Dec-2015</td>
+              <td>$349,593</td>
+              <td>$129,349</td>
+            </tr>
+            <tr>
+              <td>Jan-2016</td>
+              <td>$319,320</td>
+              <td>$118,148</td>
+            </tr>
+            <tr>
+              <td>Feb-2016</td>
+              <td>$314,703</td>
+              <td>$116,440</td>
+            </tr>
+            <tr>
+              <td>Mar-2016</td>
+              <td>$311,543</td>
+              <td>$115,271</td>
+            </tr>
+            <tr>
+              <td>Apr-2016</td>
+              <td>$316,612</td>
+              <td>$117,146</td>
+            </tr>
+            <tr>
+              <td>May-2016</td>
+              <td>$297,348</td>
+              <td>$110,019</td>
+            </tr>
+            <tr>
+              <td>Jun-2016</td>
+              <td>$271,659</td>
+              <td>$100,514</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+              <th>$5,187,715</th>
+              <th>$1,867,142</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="col-md-5 col-md-offset-2">
+        <h3 id="rightTableName">Dockside Cannabis - Seattle</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Month</th>
+              <th>Sales</th>
+              <th>Excise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sep-2015</td>
+              <td>$75,693</td>
+              <td>$28,007</td>
+            </tr>
+            <tr>
+              <td>Oct-2015</td>
+              <td>$148,646</td>
+              <td>$54,999</td>
+            </tr>
+            <tr>
+              <td>Nov-2015</td>
+              <td>$185,886</td>
+              <td>$68,778</td>
+            </tr>
+            <tr>
+              <td>Dec-2015</td>
+              <td>$200,231</td>
+              <td>$74,085</td>
+            </tr>
+            <tr>
+              <td>Jan-2016</td>
+              <td>$209,129</td>
+              <td>$77,378</td>
+            </tr>
+            <tr>
+              <td>Feb-2016</td>
+              <td>$239,770</td>
+              <td>$88,715</td>
+            </tr>
+            <tr>
+              <td>Mar-2016</td>
+              <td>$270,189</td>
+              <td>$99,970</td>
+            </tr>
+            <tr>
+              <td>Apr-2016</td>
+              <td>$314,114</td>
+              <td>$116,222</td>
+            </tr>
+            <tr>
+              <td>May-2016</td>
+              <td>$287,831</td>
+              <td>$106,497</td>
+            </tr>
+            <tr>
+              <td>Jun-2016</td>
+              <td>$298,071</td>
+              <td>$110,286</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Total</th>
+              <th>$2,229,559</th>
+              <th>$824,937</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
 
     <!-- ######!!!!!!##~~~ Scripts below here ~~~##!!!!!!###### -->
-<script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<!-- <script src="bundle.js"></script> -->
+  <script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <!-- <script src="bundle.js"></script> -->
 </body>
 </html>

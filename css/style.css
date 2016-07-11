@@ -1,0 +1,12 @@
+.dataVis div {
+  font: 10px sans-serif;
+  background-color: seagreen;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+h2, h6 {
+  text-align: center;
+}
